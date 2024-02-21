@@ -77,3 +77,41 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* static/styles.css */
+
+/* Header Styles */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
