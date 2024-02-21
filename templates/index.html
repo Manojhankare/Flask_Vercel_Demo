@@ -26,11 +26,11 @@
                 <td>{{ task }}</td>
                 <td>
                     <a href="/delete/{{ loop.index }}"><img
-                            src="{{ url_for('static', filename='icons/delete-icon.webp') }}" alt="Delete"
+                            src="{{ url_for('static', filename='icons/update-icon.webp') }}" alt="update"
                             style="width: 30px; height: 30px;">Delete</a>
                     <a href="/update/{{ loop.index }}"><img
-                            src="{{ url_for('static', filename='icons/update-icon.webp') }}" alt="Update"
-                            style="width: 30px; height: 30px;">Update</a>
+                            src="{{ url_for('static', filename='icons/delete-icon.webp') }}" alt="delete"
+                            style="width: 30px; height: 30px;">delete</a>
                 </td>
             </tr>
             {% endfor %}
