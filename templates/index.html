@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <h1>To-Do List</h1>
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Action</th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{{ task }}</td>
+            <td>
+                <a href="/delete/{{ loop.index }}"><img src="{{ url_for('static', filename='icons/delete-icon.webp') }}"
+                        alt="Delete" style="width: 30px; height: 30px;">Update</a>
+                <a href="/update/{{ loop.index }}"><img src="{{ url_for('static', filename='icons/update-icon.webp') }}"
+                        alt="Update" style="width: 30px; height: 30px;">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <form action="/add" method="post">
+        <input type="text" name="task" placeholder="Enter task">
+        <button type="submit">Add Task</button>
+    </form>
+</body>
+
+</html>
