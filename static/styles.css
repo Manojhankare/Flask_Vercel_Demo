@@ -6,6 +6,10 @@ body {
     padding: 0;
 }
 
+#tabletitle {
+    margin-left: 210px;
+}
+
 .container {
     width: 80%;
     margin: 20px auto;
