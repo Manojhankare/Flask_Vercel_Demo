@@ -9,28 +9,60 @@
 </head>
 
 <body>
-    <h1>To-Do List</h1>
-    <table>
-        <tr>
-            <th>Task</th>
-            <th>Action</th>
-        </tr>
-        {% for task in tasks %}
-        <tr>
-            <td>{{ task }}</td>
-            <td>
-                <a href="/delete/{{ loop.index }}"><img src="{{ url_for('static', filename='icons/delete-icon.webp') }}"
-                        alt="Delete" style="width: 30px; height: 30px;">Update</a>
-                <a href="/update/{{ loop.index }}"><img src="{{ url_for('static', filename='icons/update-icon.webp') }}"
-                        alt="Update" style="width: 30px; height: 30px;">Delete</a>
-            </td>
-        </tr>
-        {% endfor %}
-    </table>
-    <form action="/add" method="post">
-        <input type="text" name="task" placeholder="Enter task">
-        <button type="submit">Add Task</button>
-    </form>
+    <header>
+        <h1>Simple To-Do App</h1>
+    </header>
+
+    <div class="content">
+        <h2>To-Do List</h2>
+        <table>
+            <tr>
+                <th>Task</th>
+                <th>Action</th>
+            </tr>
+            {% for task in tasks %}
+            <tr>
+                <td>{{ task }}</td>
+                <td>
+                    <a href="/delete/{{ loop.index }}"><img
+                            src="{{ url_for('static', filename='icons/delete-icon.webp') }}" alt="Delete"
+                            style="width: 30px; height: 30px;">Update</a>
+                    <a href="/update/{{ loop.index }}"><img
+                            src="{{ url_for('static', filename='icons/update-icon.webp') }}" alt="Update"
+                            style="width: 30px; height: 30px;">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <form action="/add" method="post">
+            <input type="text" name="task" placeholder="Enter task">
+            <button type="submit">Add Task</button>
+        </form>
+
+        <div class="info">
+            <h2>Project Information</h2>
+            <p>This is a simple To-Do app built using Flask, a Python web framework. It allows you to add, delete, and
+                update tasks in a to-do list.</p>
+            <h2>Steps to Create and Deploy</h2>
+            <ol>
+                <li>Clone this repository to your local machine.</li>
+                <li>Install Flask and any required dependencies by running <code>pip install -r requirements.txt</code>.
+                </li>
+                <li>Create a virtual environment for your project.</li>
+                <li>Run the Flask app locally using <code>flask run</code>.</li>
+                <li>Sign up for a Vercel account at [vercel.com](https://vercel.com/).</li>
+                <li>Deploy your Flask app on Vercel by following the deployment instructions. Deploy it from your Main
+                    branch</li>
+            </ol>
+        </div>
+    </div>
+
+    <footer>
+        <h2>Developed by</h2>
+        <p>Manoj Hankare - <a href="https://www.linkedin.com/manojhankare">LinkedIn</a></p>
+        <p>Github Repo Link <a href="https://github.com/Manojhankare/Flask_Vercel_Demo">Github</a></p>
+    </footer>
+
 </body>
 
 </html>
